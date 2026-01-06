@@ -33,12 +33,14 @@
 ### Node.js + PostgreSQL
 
 **Koel** - Music streaming with PHP + Node.js + PostgreSQL
+
 | File              | Link                                                     |
 | ----------------- | -------------------------------------------------------- |
 | CT (update logic) | [ct/koel.sh](../../ct/koel.sh)                           |
 | Install           | [install/koel-install.sh](../../install/koel-install.sh) |
 
 **Actual Budget** - Finance app with npm global install
+
 | File              | Link                                                                     |
 | ----------------- | ------------------------------------------------------------------------ |
 | CT (update logic) | [ct/actualbudget.sh](../../ct/actualbudget.sh)                           |
@@ -47,12 +49,14 @@
 ### Python + uv
 
 **MeTube** - YouTube downloader with Python uv + Node.js + Deno
+
 | File              | Link                                                         |
 | ----------------- | ------------------------------------------------------------ |
 | CT (update logic) | [ct/metube.sh](../../ct/metube.sh)                           |
 | Install           | [install/metube-install.sh](../../install/metube-install.sh) |
 
 **Endurain** - Fitness tracker with Python uv + PostgreSQL/PostGIS
+
 | File              | Link                                                             |
 | ----------------- | ---------------------------------------------------------------- |
 | CT (update logic) | [ct/endurain.sh](../../ct/endurain.sh)                           |
@@ -61,18 +65,21 @@
 ### PHP + MariaDB/MySQL
 
 **Wallabag** - Read-it-later with PHP + MariaDB + Redis + Nginx
+
 | File              | Link                                                             |
 | ----------------- | ---------------------------------------------------------------- |
 | CT (update logic) | [ct/wallabag.sh](../../ct/wallabag.sh)                           |
 | Install           | [install/wallabag-install.sh](../../install/wallabag-install.sh) |
 
 **InvoiceNinja** - Invoicing with PHP + MariaDB + Supervisor
+
 | File              | Link                                                                     |
 | ----------------- | ------------------------------------------------------------------------ |
 | CT (update logic) | [ct/invoiceninja.sh](../../ct/invoiceninja.sh)                           |
 | Install           | [install/invoiceninja-install.sh](../../install/invoiceninja-install.sh) |
 
 **BookStack** - Wiki/Docs with PHP + MariaDB + Apache
+
 | File              | Link                                                               |
 | ----------------- | ------------------------------------------------------------------ |
 | CT (update logic) | [ct/bookstack.sh](../../ct/bookstack.sh)                           |
@@ -81,6 +88,7 @@
 ### PHP + SQLite (Simple)
 
 **Speedtest Tracker** - Speedtest with PHP + SQLite + Nginx
+
 | File              | Link                                                                               |
 | ----------------- | ---------------------------------------------------------------------------------- |
 | CT (update logic) | [ct/speedtest-tracker.sh](../../ct/speedtest-tracker.sh)                           |
@@ -168,6 +176,7 @@ setup_php
 ```
 
 **Environment Variables:**
+
 | Variable      | Default | Description                     |
 | ------------- | ------- | ------------------------------- |
 | `PHP_VERSION` | `8.3`   | PHP version to install          |
@@ -245,6 +254,7 @@ setup_postgresql
 # Specific version
 PG_VERSION="16" setup_postgresql
 PG_VERSION="17" setup_postgresql
+PG_VERSION="18" setup_postgresql
 ```
 
 ### `setup_postgresql_db`
@@ -252,7 +262,7 @@ PG_VERSION="17" setup_postgresql
 Create a PostgreSQL database and user. Sets `$PG_DB_PASS` with the generated password.
 
 ```bash
-PG_VERSION="17" setup_postgresql
+PG_VERSION="18" setup_postgresql
 PG_DB_NAME="myapp_db" PG_DB_USER="myapp_user" setup_postgresql_db
 
 # After calling, these variables are available:
@@ -302,6 +312,7 @@ CLEAN_INSTALL=1 fetch_and_deploy_gh_release "appname" "owner/repo" "tarball" "la
 ```
 
 **Parameters:**
+
 | Parameter       | Default       | Description                                                       |
 | --------------- | ------------- | ----------------------------------------------------------------- |
 | `name`          | required      | App name (for version tracking)                                   |
@@ -312,6 +323,7 @@ CLEAN_INSTALL=1 fetch_and_deploy_gh_release "appname" "owner/repo" "tarball" "la
 | `asset_pattern` | `""`          | For `prebuild`: glob pattern to match asset (e.g. `app-*.tar.gz`) |
 
 **Environment Variables:**
+
 | Variable          | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
 | `CLEAN_INSTALL=1` | Remove destination directory before extracting (for updates) |
